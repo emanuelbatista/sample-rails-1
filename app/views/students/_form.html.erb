@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css">
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
 
 <%= form_for @student, :html => { :class => "form-horizontal" } do |f| %>
   <% if student.errors.any? %>
@@ -35,7 +37,7 @@
     <div class="form-group">
       <%= f.label :age, :class => 'control-label col-lg-2' %>
       <div class="col-lg-10">
-        <%= f.number_field :age %>
+        <%= f.number_field :age, :class=>"slider", :data =>{ :slider_id=>'ex1Slider', :slider_min=>"0", :slider_max=>"20", :slider_step=>"1", :slider_value=>"14"} %>
       </div>
     </div>
   </div>
@@ -46,3 +48,7 @@
     </div>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  $('.slider').slider({});
+</script>
