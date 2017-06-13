@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @book.name %>
-</p>
+<dl class="dl-horizontl">
 
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
+  <dt><strong>Name:</strong></dt>
+  <dd><%= @book.name %></dd>
+
+
+  <dt><strong>Author:</strong></dt>
+  <dd><%= @book.author %></dd>
+
+</dl>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
