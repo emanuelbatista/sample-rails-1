@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pessoas
   resources :students
   resources :books
 	root 'application#hello'

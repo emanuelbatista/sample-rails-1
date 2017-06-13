@@ -8,13 +8,13 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Books</h1>
+<h1>Pessoas</h1>
 
 <table data-toggle="table" data-pagination="true" data-search="true">
   <thead>
     <tr>
       <th>Name</th>
-      <th>Author</th>
+      <th>Age</th>
       <th></th>
       <th></th>
       <th></th>
@@ -22,13 +22,13 @@
   </thead>
 
   <tbody>
-    <% @books.each do |book| %>
+    <% @pessoas.each do |pessoa| %>
       <tr>
-        <td><%= book.name %></td>
-        <td><%= book.author %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= pessoa.name %></td>
+        <td><%= pessoa.age %></td>
+        <td><%= link_to 'Show', pessoa %></td>
+        <td><%= link_to 'Edit', edit_pessoa_path(pessoa) %></td>
+        <td><%= link_to 'Destroy', pessoa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Book', new_book_path %>
+<%= link_to 'New Pessoa', new_pessoa_path %>
